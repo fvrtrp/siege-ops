@@ -70,7 +70,7 @@ h1 {
 
 /*   card   */
 .operatorCard {
-  min-height: 50%;
+  min-height: 30%;
   max-height: 400px;
   overflow-y: scroll;
   background: rgba(0,0,0,0.83);
@@ -80,6 +80,9 @@ h1 {
   padding: 25px 0 100px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .operatorCard::-webkit-scrollbar {
   display: none;
@@ -111,6 +114,7 @@ h1 {
 }
 .name {
   margin-top: 25px;
+  color: #2DB97E;
 }
 .barContainer .title {
   font: 700 20px 'Montserrat', sans-serif;
@@ -132,4 +136,10 @@ h1 {
 }
 .highlighted {
   color: #FF7C11;
+}
+.op-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 50px;
+  width: 75px;
 }

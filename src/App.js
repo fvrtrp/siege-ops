@@ -34,7 +34,7 @@ function App() {
       //populate result card
       const result = operators[operator];
       setNotFound(false);
-      setOperator(result);
+      setOperator({ ...result, safename: operator });
 
       if(activeSearch)
         setInput('');
@@ -43,9 +43,10 @@ function App() {
   }
 
   const randomizeOp = () => {
-    const operator = operators[Object.keys(operators)[Math.floor(Math.random()*Object.keys(operators).length)]];
+    const randomName = Object.keys(operators)[Math.floor(Math.random()*Object.keys(operators).length)];
+    const operator = operators[randomName];
     console.log(`random op`, operator);
-    setOperator(operator);
+    setOperator({ ...operator, safename: randomName });
   }
 
   return (
@@ -116,6 +117,11 @@ function App() {
             <div className="title">weight</div>
             <div className="value">{operator.meta.weight}</div>
           </div>
+          <img
+            className="op-icon"
+            src={require(`./assets/operator-icons/${operator.safename.toLowerCase()}.svg`).default}
+            alt="operator icon"
+          />
         </div>
       }
     </div>
