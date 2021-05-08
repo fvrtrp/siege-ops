@@ -26,6 +26,11 @@ h1 {
   font-family: 'Martel', serif;
     font-size: 40px;
 }
+h3 {
+  font-family: 'Martel', serif;
+    font-size: 30px;
+    text-align: center;
+}
 
 .searchContainer {
   margin: 30px auto 100px;
@@ -138,8 +143,16 @@ h1 {
   color: #FF7C11;
 }
 .op-icon {
-  position: absolute;
-  right: 5px;
+  position: fixed;
+  right: 225px;
   bottom: 50px;
-  width: 75px;
+  width: 100px;
+  z-index: 3;
+}
+.op-image {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  width: 250px;
+  z-index: 2;
 }

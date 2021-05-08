@@ -66,9 +66,9 @@ function App() {
       </form>
       {
         resultNotFound &&
-        <div className="noresult">
+        <h3 className="noresult">
           No such operator found.. Perhaps next season?
-        </div>
+        </h3>
       }
       {
         operator &&
@@ -121,6 +121,11 @@ function App() {
             className="op-icon"
             src={require(`./assets/operator-icons/${operator.safename.toLowerCase()}.svg`).default}
             alt="operator icon"
+          />
+          <img
+            className="op-image"
+            src={require(`./assets/operators/${operator.safename.toLowerCase()}.webp`).default}
+            alt="operator image"
           />
         </div>
       }
